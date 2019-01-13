@@ -50,13 +50,21 @@ class TagCrudController extends CrudController
         $this->crud->addField([
             'name' => 'name',
             'type' => 'text',
-            'label' => "Tag name"
+            'label' => "Наименование"
         ]);
 
         $this->crud->addField([
             'name' => 'slug',
             'type' => 'text',
             'label' => "URL Segment (slug)"
+        ]);
+
+        $this->crud->addField([
+            'name' => 'dates',
+            'label' => 'Vue dates',
+            'type' => 'myvue',
+            'hint' => 'Your hint will be here',
+            'another_attribute' => false
         ]);
 
         // add asterisk for fields that are required in TagRequest
